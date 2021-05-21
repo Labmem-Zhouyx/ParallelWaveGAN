@@ -28,9 +28,9 @@ if __name__ == '__main__':
     count = 0
     for p in tqdm(l):
         if count < file_num * 0.95:
-            np.save(os.path.join(train_dump_dir, p[:-4] + '-feats.npy'), np.load(os.path.join(mel_dir, p)), allow_pickle=False)
+            np.save(os.path.join(train_dump_dir, p[4:-4] + '-feats.npy'), np.load(os.path.join(mel_dir, p)), allow_pickle=False)
         else:
-            np.save(os.path.join(val_dump_dir, p[:-4] + '-feats.npy'), np.load(os.path.join(mel_dir, p)), allow_pickle=False)
+            np.save(os.path.join(val_dump_dir, p[4:-4] + '-feats.npy'), np.load(os.path.join(mel_dir, p)), allow_pickle=False)
         count += 1
 
     l = os.listdir(wav_dir)
@@ -38,9 +38,9 @@ if __name__ == '__main__':
     count = 0
     for p in tqdm(l):
         if count < file_num * 0.95:
-            np.save(os.path.join(train_dump_dir, p[:-4] + '-wave.npy'), np.load(os.path.join(wav_dir, p)), allow_pickle=False)
+            np.save(os.path.join(train_dump_dir, p[6:-4] + '-wave.npy'), np.load(os.path.join(wav_dir, p)), allow_pickle=False)
         else:
-            np.save(os.path.join(val_dump_dir, p[:-4] + '-wave.npy'), np.load(os.path.join(wav_dir, p)), allow_pickle=False)
+            np.save(os.path.join(val_dump_dir, p[6:-4] + '-wave.npy'), np.load(os.path.join(wav_dir, p)), allow_pickle=False)
         count += 1
 
     print("Task Done!")
