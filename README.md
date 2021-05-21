@@ -1,3 +1,22 @@
+# Personal Adaptation 
+1. To simplify the process, the extracting mel-spectrogram operation and the training operation are seperated.
+
+2. Setup:
+
+    a. Prepare the mel data and the audio data from speech dataset(Referred to https://github.com/Labmem-Zhouyx/audio2mel_preprocessor).
+    
+    b. Preprocess: normalize the name of training data, append "-feats" or "-wave".
+    
+    `python process_data.py --mel_dir prepare_path/mels --wav_dir prepare_path/audio --train_dir dump/train_data --val_dir dump/val_data`  
+    
+    c. Define the ".yaml" config file in ./egs/xxxx/(Referred to ./egs/bznsyp/voc1/bznsyp_params.yaml or others; supported ParallelWaveGAN, MelGAN, MB-MelGAN)
+    
+    d. Modify and run bash.
+    
+    `sh train_vocoder.sh`
+
+
+
 # Parallel WaveGAN (+ MelGAN & Multi-band MelGAN) implementation with Pytorch
 
 ![](https://github.com/kan-bayashi/ParallelWaveGAN/workflows/CI/badge.svg) [![](https://img.shields.io/pypi/v/parallel-wavegan)](https://pypi.org/project/parallel-wavegan/) ![](https://img.shields.io/pypi/pyversions/parallel-wavegan) ![](https://img.shields.io/pypi/l/parallel-wavegan) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/espnet/notebook/blob/master/espnet2_tts_realtime_demo.ipynb)
