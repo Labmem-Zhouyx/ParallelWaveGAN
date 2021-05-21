@@ -7,9 +7,9 @@
     
     b. Preprocess: normalize the name of training data, append "-feats" or "-wave".
     
-    `python process_data.py`  
+    `python process_data.py --mel_dir prepare_path/mels --wav_dir prepare_path/audio --train_dir dump/train_data --val_dir dump/val_data`  
     
-    c. Define the ".yaml" config file in ./egs/xxxx/
+    c. Define the ".yaml" config file in ./egs/xxxx/(Referred to ./egs/bznsyp/voc1/bznsyp_params.yaml or others; supported ParallelWaveGAN, MelGAN, MB-MelGAN)
     
     d. Modify and run bash.
     
