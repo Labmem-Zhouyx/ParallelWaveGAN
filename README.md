@@ -14,6 +14,10 @@
     d. Modify and run bash.
     
     `sh train_vocoder.sh`
+    
+    e. Inference, synthesize the waveform. (You can flexibly use the script in other projects, if the mel extraction parameters are consistent. )
+    
+    `sh synth_waveform.sh`
 
 
 
