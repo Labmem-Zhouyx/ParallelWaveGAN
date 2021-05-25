@@ -1,6 +1,6 @@
 #!/bin/bash
 
-config_pat=./egs/bznsyp/voc1/bznsyp_params.yaml
+config_path=./egs/bznsyp/voc1/bznsyp_params.yaml
 checkpoint=./egs/bznsyp/voc1/checkpoints/checkpoint-1000000steps.pkl
 dumpdir=path/inference_mels/
 outdir=path/inference_wavs/
